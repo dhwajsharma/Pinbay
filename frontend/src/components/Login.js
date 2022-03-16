@@ -3,6 +3,7 @@ import GoogleLogin from "react-google-login";
 import { useNavigate } from "react-router-dom";
 import { FcGoogle } from "react-icons/fc";
 import { client } from "../client";
+import logo from "../assets/logo.png";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -24,7 +25,9 @@ const Login = () => {
   return (
     <div className="flex justify-start items-center flex-col h-screen">
       <div className="items-center justify-center m-auto">
-        <div className="text-2xl font-bold mb-5">Pinbay</div>
+        <div className="p-5">
+          <img src={logo} width="130px" />
+        </div>
         <GoogleLogin
           clientId={`${process.env.REACT_APP_GOOGLE_API_TOKEN}`}
           render={(renderProps) => (
